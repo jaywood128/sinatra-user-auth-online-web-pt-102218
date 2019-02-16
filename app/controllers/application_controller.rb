@@ -18,7 +18,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/registrations' do
-
     # @user = User.new(name: params["user"]["name"], email: params["user"]["email"], password: params["user"]["password"])
     @user = User.new(params["user"])
     @user.save
