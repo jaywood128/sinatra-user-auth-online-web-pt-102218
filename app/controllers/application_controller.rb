@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
 
   post '/registrations' do
     # @user = User.new(name: params["user"]["name"], email: params["user"]["email"], password: params["user"]["password"])
-    @user = User.new(params["user"])
+    @user = User.new(params["user"]) #the nested hash returns three keys with name, email, and password
     @user.save
     session[:user_id] = @user.id
 
